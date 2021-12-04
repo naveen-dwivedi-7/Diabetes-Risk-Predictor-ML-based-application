@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+ body {
+  background-color: #E6E6FA;
+}
+	<header>
+		<div class="container">
+		<div id="brandname">
+			<h3>ML App<h3>
+		</div>
+		<h1>Diabetes detection Predictor</h1>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for your data</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Opps! You have a greater risk of having diabetes consult ur doctor.</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">Wow ! You have a lower risk of diabetes.</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
